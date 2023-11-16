@@ -8,7 +8,7 @@ int main()
 	//Song song2(1,"Riptade", "jhon", "nature", "pop", "text...","Eng",2011,180);
 	//Song song3(song2);
 	std::cin >> song1;
-	song1.print();
+	std::cout << song1;
 	
 	return 0;
 }

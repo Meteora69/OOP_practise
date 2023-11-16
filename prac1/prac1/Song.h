@@ -82,6 +82,19 @@ public:
         return in;
 
     }
+    friend std::ostream& operator<<(std::ostream& out, Song& song) {
+        out << " Data:" << std::endl;
+        out << "ID: " << song.id<< std::endl;
+        out << "Name: " << song.name << std::endl;
+        out << "Artist: " << song.artist << std::endl;
+        out << "Album: " << song.album << std::endl;
+        out << "Genre: " <<  song.genre << std::endl;
+        out << "Lyricist: " << song.lyricist << std::endl;
+        out << "Language: " << song.language << std::endl;
+        out << "Year: "<< song.year << std::endl;
+        out << "Duration: "<< song.duration << std::endl;
+        return out;
+  }
     ~Song() {
 
     }
