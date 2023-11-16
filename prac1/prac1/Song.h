@@ -95,6 +95,17 @@ public:
         out << "Duration: "<< song.duration << std::endl;
         return out;
   }
+    bool operator==(const Song& other) const {
+        return  (
+            id == other.id &&
+            name == other.name &&
+            artist == other.artist &&
+            album == other.album &&
+            genre == other.genre && 
+            lyricist == other.lyricist &&
+            language == other.language && 
+            year == other.year &&duration == other.duration);
+    }
     ~Song() {
 
     }
