@@ -59,7 +59,29 @@ public:
         std::cout << "Duration: " << duration << " seconds\n";
     }
 
+    friend std::istream& operator>> (std::istream& in,Song& song ) {
+        std::cout << "ID: ";
+        in >> song.id;
+        std::cout  << "Name: ";
+        in >> song.name;
+        std::cout  << "Artist: ";
+        in >> song.artist;
+        std::cout  << "Album: ";
+        in >> song.album;
+        std::cout  << "Genre: ";
+        in >> song.genre;
+        std::cout  << "Lyricist: ";
+        in >> song.lyricist;
+        std::cout  << "Language: ";
+        in >> song.language;
+        std::cout  << "Year: ";
+        in >> song.year;
+        std::cout  << "Duration: ";
+        in >> song.duration;
 
+        return in;
+
+    }
     ~Song() {
 
     }
