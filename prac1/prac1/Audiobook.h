@@ -2,6 +2,7 @@
 #include "Audio.h"
 #include <iostream>
 #include <string>
+using namespace std;
 class Audiobook:public Audio {
 private:
     std::string publisher;
@@ -57,6 +58,15 @@ public:
 
         return in;
     }
+    void input() override{
+        Audio::input();
+        std::cout << "Publisher: ";
+        cin >> publisher;
+        std::cout << "Price: ";
+        cin >> price;
+        std::cout << "Audio Format: ";
+        cin >> audioFormat;
+    }
 
     friend std::ostream& operator<<(std::ostream& out, Audiobook& audiobook) {
         out << "Data:" << std::endl;
@@ -84,7 +94,7 @@ public:
             audioFormat == other.audioFormat);
     }
     void printMessage() override{
-        std::cout << "virtual Function class Audiobook";
+        std::cout << "virtual Function class Audiobook" << endl;
     }
 
     ~Audiobook() {
