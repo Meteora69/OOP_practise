@@ -1,27 +1,23 @@
 #pragma once
+#include "Audio.h"
 #include <iostream>
 #include <string>
-class Audiobook {
+class Audiobook:public Audio {
 private:
-    int id;
-    std::string title;
-    std::string author;
     std::string publisher;
-    int year; 
-    int duration;
     double price;
     std::string audioFormat;
 
 public:
 
-    Audiobook() : id(0), title("not found"), author("not found"), publisher("not found"), year(0), duration(0), price(0.0), audioFormat("not found") {
-
+    Audiobook() : publisher("not found"),  price(0.0), audioFormat("not found") {
+       
     }
 
-    Audiobook(int id, const std::string& title, const std::string& author, const std::string& publisher,
+    Audiobook(int id, const std::string& name, const std::string& author, const std::string& publisher,
         int year, int duration, double price, const std::string& audioFormat) {
         this->id = id;
-        this->title = title;
+        this->name = name;
         this->author = author;
         this->publisher = publisher;
         this->year = year;
@@ -33,7 +29,7 @@ public:
     Audiobook(const Audiobook& other)
     {
         this->id = other.id;
-        this->title = other.title;
+        this->name = other.name;
         this->author = other.author;
         this->publisher = other.publisher;
         this->year = other.year;
@@ -44,8 +40,8 @@ public:
     friend std::istream& operator>> (std::istream& in, Audiobook& audiobook) {
         std::cout << "ID: ";
         in >> audiobook.id;
-        std::cout << "Title: ";
-        in >> audiobook.title;
+        std::cout << "name: ";
+        in >> audiobook.name;
         std::cout << "Author: ";
         in >> audiobook.author;
         std::cout << "Publisher: ";
@@ -65,7 +61,7 @@ public:
     friend std::ostream& operator<<(std::ostream& out, Audiobook& audiobook) {
         out << "Data:" << std::endl;
         out << "ID: " << audiobook.id << std::endl;
-        out << "Title: " << audiobook.title << std::endl;
+        out << "name: " << audiobook.name << std::endl;
         out << "Author: " << audiobook.author << std::endl;
         out << "Publisher: " << audiobook.publisher << std::endl;
         out << "Publication Year: " << audiobook.year << std::endl;
@@ -79,7 +75,7 @@ public:
     bool operator==(const Audiobook& other) const {
         return (
             id == other.id &&
-            title == other.title &&
+            name == other.name &&
             author == other.author &&
             publisher == other.publisher &&
             year == other.year &&

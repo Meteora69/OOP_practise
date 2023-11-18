@@ -1,22 +1,19 @@
 #pragma once
+#include "Audio.h"
 #include <iostream>
 #include <string>
 
-class Song {
+class Song :public Audio {
 private:
-    int id;
-    std::string name;
-    std::string author; 
+     
     std::string album;
     std::string genre;
     std::string lyricist;
     std::string language;
-    int year; 
-    int duration;
-
+    
 public:
 
-    Song() : id(0), name("not found"), author("not found"), album("not found"), genre("not found"), lyricist("not found"), language("not found"), year(0), duration(0) {
+    Song() :  album("not found"), genre("not found"), lyricist("not found"), language("not found") {
 
     }
 
