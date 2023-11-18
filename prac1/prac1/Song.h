@@ -89,6 +89,9 @@ public:
             language == other.language &&
             year == other.year && duration == other.duration);
     }
+    void printMessage() override {
+        std::cout << "virtual Function class Song";
+    }
 
     ~Song() {
 

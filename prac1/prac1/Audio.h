@@ -37,6 +37,9 @@ public:
      out << "Duration: " << song.duration << std::endl;
      return out;
  }
+ virtual void printMessage() {
+     std::cout << "virtual Function class Audio";
+ }
  ~Audio(){}
 };
 
