@@ -21,9 +21,15 @@
     <ClCompile Include="Song.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Audiobook.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Song.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Audiobook.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
