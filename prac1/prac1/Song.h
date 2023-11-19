@@ -2,7 +2,7 @@
 #include "Audio.h"
 #include <iostream>
 #include <string>
-
+using namespace std;
 class Song :public Audio {
 private:
      
@@ -65,6 +65,17 @@ public:
         return in;
 
     }
+ void input() override {
+        Audio::input();
+        std::cout << "Album: ";
+        cin >> album;
+        std::cout << "Genre: ";
+        cin >> genre;
+        std::cout << "Lyricist: ";
+        cin >> lyricist;
+        std::cout << "Language: ";
+        cin >> language;
+    }
     friend std::ostream& operator<<(std::ostream& out, Song& song) {
         out << " Data:" << std::endl;
         out << "ID: " << song.id << std::endl;
@@ -88,6 +99,9 @@ public:
             lyricist == other.lyricist &&
             language == other.language &&
             year == other.year && duration == other.duration);
+    }
+    void printMessage() override {
+        std::cout << "virtual Function class Song" << endl;
     }
 
     ~Song() {

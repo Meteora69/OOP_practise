@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+using namespace std;
 class Audio
 {
 protected:
@@ -28,6 +29,18 @@ public:
      return in;
 
  }
+ virtual void input() {
+     std::cout << "ID: ";
+     cin >> id;
+     std::cout << "Name: ";
+     cin >> name;
+     std::cout << "Author: ";
+     cin >> author;
+     std::cout << "Year: ";
+     cin >> year;
+     std::cout << "Duration: ";
+     cin >> duration;
+ }
  friend std::ostream& operator<<(std::ostream& out, Audio& song) {
      out << " Data:" << std::endl;
      out << "ID: " << song.id << std::endl;
@@ -36,6 +49,9 @@ public:
      out << "Year: " << song.year << std::endl;
      out << "Duration: " << song.duration << std::endl;
      return out;
+ }
+ virtual void printMessage() {
+     std::cout << "virtual Function class Audio"<<endl;
  }
  ~Audio(){}
 };
