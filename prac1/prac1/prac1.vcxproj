@@ -131,11 +131,13 @@
     <ClCompile Include="Audiobook.cpp" />
     <ClCompile Include="prac1.cpp" />
     <ClCompile Include="Song.cpp" />
+    <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Audio.h" />
     <ClInclude Include="Audiobook.h" />
     <ClInclude Include="Song.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

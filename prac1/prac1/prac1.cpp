@@ -1,50 +1,32 @@
 ﻿#include "Song.h"
 #include "Audiobook.h"
 #include "Audio.h"
+#include  "Vector.h"
 #include <iostream>
-using namespace std;
+
 int main()
 {
-	const int arrLong = 3;
-	Audio* audioList[arrLong];
-	int choice;
-	for (int i = 0; i < arrLong; i++) {
+	Vector<int> intVector;
+	intVector.push_back(2);
+	intVector.push_back(4);
+	intVector.push_back(-8);
+	Vector<double> doubleVector;
+	doubleVector.push_back(2);
+	doubleVector.push_back(2.2);
+	doubleVector.push_back(-5.4);
+	doubleVector.arrPrint();
+	intVector.arrPrint();
+	Song song1;
+	Song song2(1, "Riptade", "jhon", "nature", "pop", "text...", "Eng", 2011, 180);
+	Audiobook book1;
+	Audiobook book2(2, "The Art of Programming", "Donald Knuth", "PublisherX", 2022, 3600, 29.99, "MP3");
 
-		cout << "======== Menu ========" << endl;
-		cout << "1. Class Audio" << endl;
-		cout << "2.  Class Audiobook" << endl;
-		cout << "3. Class Song" << endl;
-		
-		cout << "======================" << endl;
-		cout << "Chose option: ";
-		cin >> choice;
-
-		switch (choice) {
-		case 1:
-			audioList[i] = new Audio;
-			break;
-		case 2:
-			audioList[i] = new Audiobook;
-			
-			break;
-		case 3:
-			audioList[i] = new Song;
-			
-			break;
-		default:
-			cout << "Eror.Try again ." << endl;
-			i--;
-		}
-	   audioList[i]->input();
-	}
-	for (int i = 0; i < arrLong; i++) {
-		cout << *audioList[i];
-	}
-	for (int i = 0; i < arrLong; i++) {
-		audioList[i]->printMessage();
-		delete audioList[i];
-	}
-	
-
+	Vector<Audio> classVector;
+	classVector.push_back(song1);
+	classVector.push_back(song2);
+	classVector.push_back(book1);
+	classVector.push_back(book2);
+	classVector.arrPrint();
 	return 0;
 }
+
