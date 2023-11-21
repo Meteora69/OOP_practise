@@ -1,5 +1,4 @@
 ﻿  prac1.cpp
-  Vector.cpp
-  Создание кода...
+D:\коледж\Prac OOP\prac1\prac1\prac1.cpp(12,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   LINK : не найден или не выполнена сборка D:\коледж\Prac OOP\prac1\x64\Debug\prac1.exe при последней инкрементной компоновке; выполняется полная компоновка
   prac1.vcxproj -> D:\коледж\Prac OOP\prac1\x64\Debug\prac1.exe
