@@ -14,6 +14,21 @@ public:
  Audio() : id(0), name("not found"), author("not found"), year(0), duration(0){
 
  }
+ void setId(int id) {
+     this->id = id;
+ }
+ int getId() {
+     return id;
+ }
+ void print() {
+     cout << " Data:" << std::endl;
+     cout << "ID: " << id << std::endl;
+     cout << "Name: " << name << std::endl;
+     cout << "Author: " << author << std::endl;
+     cout << "Year: " << year << std::endl;
+     cout << "Duration: " << duration << std::endl;
+     
+ }
  friend std::istream& operator>> (std::istream& in, Audio& song) {
      std::cout << "ID: ";
      in >> song.id;

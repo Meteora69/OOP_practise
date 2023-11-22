@@ -1,4 +1,3 @@
 ﻿  prac1.cpp
-D:\коледж\Prac OOP\prac1\prac1\prac1.cpp(12,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  LINK : не найден или не выполнена сборка D:\коледж\Prac OOP\prac1\x64\Debug\prac1.exe при последней инкрементной компоновке; выполняется полная компоновка
+D:\коледж\Prac OOP\prac1\prac1\prac1.cpp(21,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   prac1.vcxproj -> D:\коледж\Prac OOP\prac1\x64\Debug\prac1.exe
