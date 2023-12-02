@@ -213,6 +213,15 @@ public:
         pushButton = new QPushButton(DialogCreateSong);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(410, 250, 231, 31));
+        QWidget::setTabOrder(lineEdit_id, lineEdit_name);
+        QWidget::setTabOrder(lineEdit_name, lineEdit_author);
+        QWidget::setTabOrder(lineEdit_author, lineEdit_year);
+        QWidget::setTabOrder(lineEdit_year, lineEdit_duration);
+        QWidget::setTabOrder(lineEdit_duration, lineEdit_album);
+        QWidget::setTabOrder(lineEdit_album, lineEdit_genre);
+        QWidget::setTabOrder(lineEdit_genre, lineEdit_lyric);
+        QWidget::setTabOrder(lineEdit_lyric, lineEdit_languige);
+        QWidget::setTabOrder(lineEdit_languige, pushButton);
 
         retranslateUi(DialogCreateSong);
 

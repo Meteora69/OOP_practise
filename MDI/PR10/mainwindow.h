@@ -2,10 +2,18 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSqlTableModel>
 #include "dialogcreatesong.h"
 #include "dialogprintsong.h"
 #include "dialogaudiobookcreate.h"
 #include "dialogaudiobookprint.h"
+#include "sqlitedbmanager.h"
+
+
+class QSqlTableModel;
+
+class DBManager;
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -13,10 +21,18 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+    public:
 
-public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+     ~MainWindow();
+    explicit MainWindow(DBManager* dbManrage, QWidget* parent = nullptr);
+private:
+    DBManager* dbManager;
+
+//QSqlTableModel* model;
+
+
+
+
 
 private slots:
     void on_button_createSong_clicked();

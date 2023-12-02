@@ -1,4 +1,5 @@
 QT       += core gui
+QT += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,17 +18,20 @@ SOURCES += \
     dialogprintsong.cpp \
     main.cpp \
     mainwindow.cpp \
-    song.cpp
+    song.cpp \
+    sqlitedbmanager.cpp
 
 HEADERS += \
     audio.h \
     audiobook.h \
+    dbmanager.h \
     dialogaudiobookcreate.h \
     dialogaudiobookprint.h \
     dialogcreatesong.h \
     dialogprintsong.h \
     mainwindow.h \
-    song.h
+    song.h \
+    sqlitedbmanager.h
 
 FORMS += \
     dialogaudiobookcreate.ui \

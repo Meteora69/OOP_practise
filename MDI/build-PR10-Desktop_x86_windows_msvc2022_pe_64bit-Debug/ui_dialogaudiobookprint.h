@@ -12,23 +12,36 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QListWidget>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QTableView>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_DialogAudiobookPrint
 {
 public:
-    QListWidget *listWidget;
+    QGridLayout *gridLayout_2;
+    QGridLayout *gridLayout;
+    QTableView *tableView;
 
     void setupUi(QDialog *DialogAudiobookPrint)
     {
         if (DialogAudiobookPrint->objectName().isEmpty())
             DialogAudiobookPrint->setObjectName("DialogAudiobookPrint");
-        DialogAudiobookPrint->resize(536, 338);
-        listWidget = new QListWidget(DialogAudiobookPrint);
-        listWidget->setObjectName("listWidget");
-        listWidget->setGeometry(QRect(10, 0, 521, 311));
+        DialogAudiobookPrint->resize(521, 340);
+        gridLayout_2 = new QGridLayout(DialogAudiobookPrint);
+        gridLayout_2->setObjectName("gridLayout_2");
+        gridLayout = new QGridLayout();
+        gridLayout->setObjectName("gridLayout");
+        tableView = new QTableView(DialogAudiobookPrint);
+        tableView->setObjectName("tableView");
+
+        gridLayout->addWidget(tableView, 0, 0, 1, 1);
+
+
+        gridLayout_2->addLayout(gridLayout, 0, 0, 1, 1);
+
 
         retranslateUi(DialogAudiobookPrint);
 

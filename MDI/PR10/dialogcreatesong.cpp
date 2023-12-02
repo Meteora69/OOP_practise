@@ -16,20 +16,20 @@ DialogCreateSong::~DialogCreateSong()
 
 void DialogCreateSong::on_pushButton_clicked()
 {
-    if (ui->lineEdit_id->text().isEmpty() &&
-        ui->lineEdit_name->text().isEmpty() &&
-        ui->lineEdit_author->text().isEmpty() &&
-        ui->lineEdit_album->text().isEmpty() &&
-        ui->lineEdit_genre->text().isEmpty() &&
-        ui->lineEdit_lyric->text().isEmpty() &&
-        ui->lineEdit_languige->text().isEmpty() &&
-        ui->lineEdit_duration->text().isEmpty() &&
+    if (ui->lineEdit_id->text().isEmpty() ||
+        ui->lineEdit_name->text().isEmpty() ||
+        ui->lineEdit_author->text().isEmpty() ||
+        ui->lineEdit_album->text().isEmpty() ||
+        ui->lineEdit_genre->text().isEmpty() ||
+        ui->lineEdit_lyric->text().isEmpty() ||
+        ui->lineEdit_languige->text().isEmpty() ||
+        ui->lineEdit_duration->text().isEmpty() ||
         ui->lineEdit_year->text().isEmpty())
     {
-        QMessageBox::information(nullptr, "Пусте полк", "Введіть всі поля");
+        QMessageBox::information(nullptr, "Пусте полe", "Введіть всі поля");
     }
     else{
-        Song* song =new Song(ui->lineEdit_id->text().toInt(),
+        Song* song = new Song(ui->lineEdit_id->text().toInt(),
                   ui->lineEdit_name->text(),
                   ui->lineEdit_author->text(),
                   ui->lineEdit_album->text(),

@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "song.h"
+
 namespace Ui {
 class DialogCreateSong;
 }
@@ -14,6 +15,7 @@ class DialogCreateSong : public QDialog
 public:
     explicit DialogCreateSong(QWidget *parent = nullptr);
     ~DialogCreateSong();
+
 signals:
     void createdSong(Song*);
 private slots:

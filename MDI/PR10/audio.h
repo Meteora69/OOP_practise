@@ -15,15 +15,15 @@ protected:
     int year;
     int duration;
 public:
- Audio() : id(0), name("not found"), author("not found"), year(0), duration(0){
-
- }
- void setId(int id) {
-     this->id = id;
- }
- int getId() {
-     return id;
- }
+    virtual void PrintMessage()=0;
+ Audio() : id(0), name("not found"), author("not found"), year(0), duration(0){}
+ void setId(int id);
+ int getId() const;
+QString getName() const;
+QString getAuthor() const;
+int getYear() const;
+ int getDuration() const;
+  virtual QString getType() const = 0;
 
  ~Audio(){}
 };

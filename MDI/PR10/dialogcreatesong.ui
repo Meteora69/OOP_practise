@@ -279,6 +279,18 @@
    </property>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_id</tabstop>
+  <tabstop>lineEdit_name</tabstop>
+  <tabstop>lineEdit_author</tabstop>
+  <tabstop>lineEdit_year</tabstop>
+  <tabstop>lineEdit_duration</tabstop>
+  <tabstop>lineEdit_album</tabstop>
+  <tabstop>lineEdit_genre</tabstop>
+  <tabstop>lineEdit_lyric</tabstop>
+  <tabstop>lineEdit_languige</tabstop>
+  <tabstop>pushButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

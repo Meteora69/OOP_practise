@@ -402,11 +402,13 @@ Makefile: ..\PR10\PR10.pro ..\..\..\..\QT\6.6.0\msvc2019_64\mkspecs\win32-msvc\q
 		..\PR10\PR10.pro \
 		..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Widgets.prl \
 		..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Gui.prl \
+		..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Sql.prl \
 		..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Core.prl \
 		..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6EntryPoint.prl \
 		..\..\..\..\QT\6.6.0\msvc2019_64\mkspecs\features\build_pass.prf \
 		..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Widgetsd.prl \
 		..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Guid.prl \
+		..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Sqld.prl \
 		..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Cored.prl \
 		..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6EntryPointd.prl
 	$(QMAKE) -o Makefile ..\PR10\PR10.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -728,11 +730,13 @@ Makefile: ..\PR10\PR10.pro ..\..\..\..\QT\6.6.0\msvc2019_64\mkspecs\win32-msvc\q
 ..\PR10\PR10.pro:
 ..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Widgets.prl:
 ..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Gui.prl:
+..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Sql.prl:
 ..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Core.prl:
 ..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6EntryPoint.prl:
 ..\..\..\..\QT\6.6.0\msvc2019_64\mkspecs\features\build_pass.prf:
 ..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Widgetsd.prl:
 ..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Guid.prl:
+..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Sqld.prl:
 ..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6Cored.prl:
 ..\..\..\..\QT\6.6.0\msvc2019_64\lib\Qt6EntryPointd.prl:
 qmake: FORCE
