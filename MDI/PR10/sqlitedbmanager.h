@@ -50,6 +50,8 @@ private:
      bool restoreDataBase();
      void closeDataBase();
      bool createTables();
+
+     void logError(const QString& error);
 };
 
 
